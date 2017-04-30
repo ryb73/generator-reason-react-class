@@ -1,6 +1,6 @@
 {
   "name": "generator-reason-react-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates a Reason-React class",
   "homepage": "https://github.com/ryb73/generator-reason-react-class",
   "author": {
