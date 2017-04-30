@@ -1,5 +1,6 @@
 "use strict";
-const Generator = require("yeoman-generator");
+const Generator  = require("yeoman-generator"),
+      changeCase = require("change-case");
 
 module.exports = class extends Generator {
     prompting() {
@@ -18,8 +19,10 @@ module.exports = class extends Generator {
     writing() {
         this.fs.copyTpl(
             this.templatePath("class.re"),
-            this.destinationPath(`${this.props.className}.re`),
-            this.props
+            this.destinationPath(`${changeCase.camelCase(this.props.className)}.re`),
+            {
+                className: changeCase.pascalCase(this.props.className)
+            }
         );
     }
 };
