@@ -3,7 +3,7 @@ module <%= className %> = {
     let name = "<%= className %>";
     type props = ();
 
-    let render { props } =>
+    let render _ =>
         <div>
             (ReactRe.stringToElement name)
         </div>;
